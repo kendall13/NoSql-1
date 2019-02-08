@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NoSql.PrimerEjemplo.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -30,6 +31,18 @@ namespace NoSql.PrimerEjemplo.Controllers
         public ActionResult SayHello()
         {
             return View();
+        }
+
+        public ActionResult SayHelloToSomebody()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult SayHelloToSomebody(MessageModel elmodelo)
+        {
+
+            return View("ShowMessageFromSomebody", elmodelo);
         }
     }
 }
